@@ -46,7 +46,6 @@ Temporary Items
 *.o
 *.d
 *.mk
-.metadata
 */Debug/
 RemoteSystemsTempFiles/
 makefile

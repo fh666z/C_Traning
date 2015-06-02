@@ -17,7 +17,6 @@ class SalaryCalc
 {
 private:
 	unsigned m_sales_per_week;
-	double   m_pair_value;
 	struct
 	{
 		double const_salary;
@@ -30,16 +29,10 @@ private:
 		double hours_per_week;
 	}m_method_2_params;
 
-	struct
-	{
-		double percentage_of_sales;
-		double bonus_per_pair;
-	}m_method_3_params;
-
 public:
-	SalaryCalc();
-	SalaryCalc(unsigned sales);
-	~SalaryCalc();
+	SalaryCalc() {m_sales_per_week = 0;}
+	SalaryCalc(unsigned sales):m_sales_per_week(sales){}
+	~SalaryCalc() { }
 
 	void SetSalesPerWeek(unsigned sales) { m_sales_per_week = sales;}
 

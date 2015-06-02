@@ -39,8 +39,6 @@ SalaryCalc::SalaryCalc()
 {
 	m_sales_per_week = 0;
 
-	m_pair_value = PAIR_VALUE;
-
 	m_method_1_params.const_salary = STRAIGHT_SALARY;
 
 	m_method_2_params.hours_per_week = HOURS_PER_WEEK;
@@ -53,8 +51,6 @@ SalaryCalc::SalaryCalc()
 
 SalaryCalc::SalaryCalc(unsigned sales):m_sales_per_week(sales)
 {
-	m_pair_value = PAIR_VALUE;
-
 	m_method_1_params.const_salary = STRAIGHT_SALARY;
 
 	m_method_2_params.hours_per_week = HOURS_PER_WEEK;
@@ -72,18 +68,17 @@ SalaryCalc::~SalaryCalc()
 
 double SalaryCalc::CalcMethod1(void)
 {
-    return (double)m_method_1_params.const_salary;
+    return (double)STRAIGHT_SALARY;
 }
 
 double SalaryCalc::CalcMethod2(void)
 {
-    return (double)(m_method_2_params.hours_per_week * m_method_2_params.usd_per_hour
-    				+ m_sales_per_week * m_method_2_params.percentage_of_sales * m_pair_value);
+    return (double)(HOURS_PER_WEEK * DOLARS_PER_HOUR + m_sales_per_week * M2_PERCENT_OF_SALES * PAIR_VALUE);
 }
 
 double SalaryCalc::CalcMethod3(void)
 {
-    return (double)(m_sales_per_week * (m_method_3_params.percentage_of_sales * m_pair_value + m_method_3_params.bonus_per_pair));
+    return (double)(m_sales_per_week * (M3_PERCENT_OF_SALES * PAIR_VALUE + M3_BONUS_PER_PAIR));
 }
 
 template <class ValueType>

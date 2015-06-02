@@ -78,12 +78,12 @@ double SalaryCalc::CalcMethod1(void)
 double SalaryCalc::CalcMethod2(void)
 {
     return (double)(m_method_2_params.hours_per_week * m_method_2_params.usd_per_hour
-    				+ m_sales_per_week * m_method_2_params.percentage_of_sales * m_pair_value);
+    				+ m_sales_per_week * m_method_2_params.percentage_of_sales * PAIR_m_pair_valueVALUE);
 }
 
 double SalaryCalc::CalcMethod3(void)
 {
-    return (double)(m_sales_per_week * (m_method_3_params.percentage_of_sales * m_pair_value + m_method_3_params.bonus_per_pair));
+    return (double)(m_sales_per_week * (M3_PERCENT_OF_SALES * PAIR_VALUE + M3_BONUS_PER_PAIR));
 }
 
 template <class ValueType>

@@ -17,7 +17,6 @@ class SalaryCalc
 {
 private:
 	unsigned m_sales_per_week;
-	double   m_pair_value;
 	struct
 	{
 		double const_salary;

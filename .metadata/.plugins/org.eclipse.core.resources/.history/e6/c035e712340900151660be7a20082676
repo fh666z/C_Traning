@@ -83,7 +83,7 @@ double SalaryCalc::CalcMethod2(void)
 
 double SalaryCalc::CalcMethod3(void)
 {
-    return (double)(m_sales_per_week * (m_method_3_params.percentage_of_sales * m_pair_value + m_method_3_params.bonus_per_pair));
+    return (double)(m_sales_per_week * (m_method_3_params.percentage_of_sales * m_pair_value + M3_BONUS_PER_PAIR));
 }
 
 template <class ValueType>
