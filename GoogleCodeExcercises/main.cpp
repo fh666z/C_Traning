@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include "Ex7.hpp"
+#include "Ex9.hpp"
 
 using namespace std;
 
@@ -16,7 +17,9 @@ using namespace std;
 
 int main(void)
 {
-    Ex7_test();
+//    Ex7_test();
+
+    Ex9_test();
 
 	return 0;
 }
