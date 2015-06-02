@@ -47,29 +47,62 @@ double SalaryCalc::CalcMethod3(void)
 }
 
 template <class ValueType>
-ValueType max_of_values(list<ValueType> values_list)
+unsigned index_of_max_value(list<ValueType> values_list, ValueType &value)
 {
+	unsigned abs_position = 0;
     ValueType max_value = values_list.front();
-    list<ValueType*>::iterator list_iter;
-    for (list_iter = values_list.begin(); list_iter < values_list.end(); ++list_iter)
+    typename list<ValueType>::iterator list_iter;
+    for (list_iter = values_list.begin(); list_iter != values_list.end(); ++list_iter)
         if (*list_iter > max_value)
+        {
             max_value = *list_iter;
+            abs_position = std::distance(values_list.begin(), list_iter);
+        }
 
-    return max_value;
+    value = max_value;
+    // abs_position -> zero based converted to one based
+    return abs_position + 1;
 }
 
 
 void Ex7_test(void)
 {
-    list<int> lst(10);
-    cout << "Test: " << max_of_values<int>(lst) << endl;
+    list<double> methods_lst;
 
-    const unsigned sales = 10;
-    SalaryCalc salary_calc1(sales);
+    SalaryCalc salary_calc;
+#if 0
+    SalaryCalc salary_calc(8);
     cout << "Sales per week: " << sales << endl;
-    cout << "Calculated salary Method 1: " << salary_calc1.CalcMethod1() << endl;
-    cout << "Calculated salary Method 2: " << salary_calc1.CalcMethod2() << endl;
-    cout << "Calculated salary Method 3: " << salary_calc1.CalcMethod3() << endl;
+
+    double calc = salary_calc.CalcMethod1();
+    methods_lst.push_back(calc);
+    cout << "Calculated salary Method 1: " << calc << endl;
+
+    calc = salary_calc.CalcMethod2();
+    methods_lst.push_back(calc);
+    cout << "Calculated salary Method 2: " << calc << endl;
+
+    calc = salary_calc.CalcMethod3();
+    methods_lst.push_back(calc);
+    cout << "Calculated salary Method 3: " << calc << endl;
+#endif
+    for(unsigned sales = 1; sales < 200; sales++)
+    {
+    	methods_lst.clear();
+    	salary_calc.SetSalesPerWeek(sales);
+    	methods_lst.push_back(salary_calc.CalcMethod1());
+    	methods_lst.push_back(salary_calc.CalcMethod2());
+    	methods_lst.push_back(salary_calc.CalcMethod3());
+
+    	double best_salary;
+    	cout << "Sales per week: " << sales << endl;
+		cout << "Best method: Method " << index_of_max_value(methods_lst, best_salary) << endl;
+		cout << "Net Salary: " << best_salary << endl << endl;
+    }
+
+
+    int test1;
+    cin >> test1;
 }
 
 
