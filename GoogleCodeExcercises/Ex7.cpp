@@ -139,10 +139,6 @@ void Ex7_test(void)
 		cout << "Best method: Method " << index_of_max_value(methods_lst, best_salary) << endl;
 		cout << "Net Salary: " << best_salary << endl << endl;
     }
-
-
-    int test1;
-    cin >> test1;
 }
 
 
