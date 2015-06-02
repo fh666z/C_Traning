@@ -1,0 +1,26 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 1.06.2015 ã.
+ *      Author: Momchil
+ */
+
+#include <iostream>
+#include "Ex7.hpp"
+
+using namespace std;
+
+
+
+int main(void)
+{
+	// Patch for Eclipse CDT console
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+    Ex7_test();
+
+	return 0;
+}
+
+
