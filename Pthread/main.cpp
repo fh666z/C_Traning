@@ -12,7 +12,9 @@ int main(int argc, char **argv)
 {
 //	example1_hello();
 
-	example2_hello32();
+//	example2_hello32();
+
+	hello_arg1();
 }
 
 

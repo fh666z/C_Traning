@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../example1_hello.cpp \
 ../example2_hello32.cpp \
+../hello_arg1.cpp \
 ../main.cpp 
 
 OBJS += \
 ./example1_hello.o \
 ./example2_hello32.o \
+./hello_arg1.o \
 ./main.o 
 
 CPP_DEPS += \
 ./example1_hello.d \
 ./example2_hello32.d \
+./hello_arg1.d \
 ./main.d 
 
 
