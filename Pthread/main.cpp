@@ -14,7 +14,9 @@ int main(int argc, char **argv)
 
 //	example2_hello32();
 
-	hello_arg1();
+//	hello_arg1();
+
+	hello_arg2();
 }
 
 

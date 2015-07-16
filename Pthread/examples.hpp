@@ -11,6 +11,7 @@
 void example1_hello(void);
 void example2_hello32(void);
 void hello_arg1(void);
+void hello_arg2(void);
 
 
 #endif /* EXAMPLES_HPP_ */

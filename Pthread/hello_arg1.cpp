@@ -13,10 +13,10 @@
 
 #define NUM_THREADS			8
 
-char *messages[NUM_THREADS];
+char *messages1[NUM_THREADS];
 
 
-void *PrintHello(void *threadid)
+void *PrintHello1(void *threadid)
 {
    int *id_ptr, taskid;
 
@@ -24,7 +24,7 @@ void *PrintHello(void *threadid)
 
    id_ptr = (int *) threadid;
    taskid = *id_ptr;
-   printf("Thread %d: %s\n", taskid, messages[taskid]);
+   printf("Thread %d: %s\n", taskid, messages1[taskid]);
    pthread_exit(NULL);
 }
 
@@ -35,14 +35,14 @@ void hello_arg1(void)
 	int *taskids[NUM_THREADS];
 	int rc, t;
 
-	messages[0] = "English: Hello World!";
-	messages[1] = "French: Bonjour, le monde!";
-	messages[2] = "Spanish: Hola al mundo";
-	messages[3] = "Klingon: Nuq neH!";
-	messages[4] = "German: Guten Tag, Welt!";
-	messages[5] = "Russian: Zdravstvuyte, mir!";
-	messages[6] = "Japan: Sekai e konnichiwa!";
-	messages[7] = "Latin: Orbis, te saluto!";
+	messages1[0] = "English: Hello World!";
+	messages1[1] = "French: Bonjour, le monde!";
+	messages1[2] = "Spanish: Hola al mundo";
+	messages1[3] = "Klingon: Nuq neH!";
+	messages1[4] = "German: Guten Tag, Welt!";
+	messages1[5] = "Russian: Zdravstvuyte, mir!";
+	messages1[6] = "Japan: Sekai e konnichiwa!";
+	messages1[7] = "Latin: Orbis, te saluto!";
 
 	for(t=0;t<NUM_THREADS;t++)
 	{
@@ -50,7 +50,7 @@ void hello_arg1(void)
 		*taskids[t] = t;
 
 		printf("Creating thread %d\n", t);
-		rc = pthread_create(&threads[t], NULL, PrintHello, (void *) taskids[t]);
+		rc = pthread_create(&threads[t], NULL, PrintHello1, (void *) taskids[t]);
 
 		if (rc)
 		{
