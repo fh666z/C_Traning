@@ -13,6 +13,7 @@ void example2_hello32(void);
 void hello_arg1(void);
 void hello_arg2(void);
 void bug3(void);
+void bug5(void);
 
 
 #endif /* EXAMPLES_HPP_ */
