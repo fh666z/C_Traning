@@ -20,7 +20,12 @@ int main(int argc, char **argv)
 
 //	bug3();
 
-	bug5();
+//	bug5();
+
+//	thread_join_example();
+
+	detached_example();
+
 }
 
 
