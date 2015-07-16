@@ -24,7 +24,9 @@ int main(int argc, char **argv)
 
 //	thread_join_example();
 
-	detached_example();
+//	detached_example();
+
+	stack_example();
 
 }
 

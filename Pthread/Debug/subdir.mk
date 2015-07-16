@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../bug2_stack.cpp \
 ../bug3.cpp \
 ../bug5.cpp \
 ../detached.cpp \
@@ -15,6 +16,7 @@ CPP_SRCS += \
 ../main.cpp 
 
 OBJS += \
+./bug2_stack.o \
 ./bug3.o \
 ./bug5.o \
 ./detached.o \
@@ -26,6 +28,7 @@ OBJS += \
 ./main.o 
 
 CPP_DEPS += \
+./bug2_stack.d \
 ./bug3.d \
 ./bug5.d \
 ./detached.d \

@@ -16,6 +16,7 @@ void bug3(void);
 void bug5(void);
 void thread_join_example(void);
 void detached_example(void);
+void stack_example(void);
 
 
 #endif /* EXAMPLES_HPP_ */
