@@ -16,7 +16,9 @@ int main(int argc, char **argv)
 
 //	hello_arg1();
 
-	hello_arg2();
+//	hello_arg2();
+
+	bug3();
 }
 
 
