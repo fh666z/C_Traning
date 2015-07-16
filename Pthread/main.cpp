@@ -10,7 +10,9 @@
 
 int main(int argc, char **argv)
 {
-	pthread_hello();
+//	example1_hello();
+
+	example2_hello32();
 }
 
 

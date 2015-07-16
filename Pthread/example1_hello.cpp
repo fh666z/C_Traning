@@ -23,7 +23,7 @@ void *print_method(void *arg)
 }
 
 
-void pthread_hello(void)
+void example1_hello(void)
 {
 	pthread_t my_threads[THREAD_COUNT];
 	int my_thread_ids[THREAD_COUNT];
